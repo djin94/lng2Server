@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="Lng2DB@localhost" uuid="ecbba3f9-2d42-4b29-a13e-9948f218948e">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/Lng2DB</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="Lng2DBUsers@localhost" uuid="395fcd70-d676-40fc-8d1c-88e5a0945f0f">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/Lng2DBUsers</jdbc-url>
+    </data-source>
+  </component>
+</project>

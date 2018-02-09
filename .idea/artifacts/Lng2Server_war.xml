@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="Lng2Server:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="MyTwitter.war">
+      <element id="artifact" artifact-name="Lng2Server:war exploded" />
+    </root>
+  </artifact>
+</component>
