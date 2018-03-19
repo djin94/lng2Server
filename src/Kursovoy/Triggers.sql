@@ -27,7 +27,7 @@ FOR EACH ROW EXECUTE PROCEDURE SNProdCheck();
 INSERT INTO Products (serialnumber, typeproduct_id, daterelease) VALUES ('0152',1,'2018-1-15');
 
 /*3. Триггер, запрещающий добавление записи в таблицу Returnproduct, если
-дата возврата продукции должна быть или равна, или позже даты поставки*/
+дата возврата продукции раньше даты поставки*/
 CREATE FUNCTION DateReturnCheck() RETURNS TRIGGER AS $$
 BEGIN
   IF NEW.datereturn<(SELECT s.datesupply FROM supply s WHERE s.product_id=new.product_id) THEN
@@ -42,7 +42,7 @@ FOR EACH ROW EXECUTE PROCEDURE DateReturnCheck();
 INSERT INTO ReturnProduct (return_id, product_id, staff_id, applicant_id, datereturn) VALUES (2,2,1,1,'2018-02-02');
 
 /*4. Триггер, запрещающий добавление записи в таблицу ND, если
-дата начала действия нормативного документа должна быть раньше даты окончания*/
+дата начала действия нормативного документа позже даты окончания*/
 CREATE FUNCTION NDDatesCheck() RETURNS TRIGGER AS $$
 BEGIN
   IF NEW.startdate>=NEW.enddate THEN
@@ -53,3 +53,9 @@ $$  language plpgsql;
 
 CREATE TRIGGER NDDates BEFORE INSERT OR UPDATE ON ND
 FOR EACH ROW EXECUTE PROCEDURE NDDatesCheck();
+
+INSERT INTO ND (nd_id, typend_id, namend, startdate,enddate) VALUES (10,1,'Методика наладочных работ для УОИ 27.Т.012-01','2012-04-01','2011-04-01');
+
+/*5. */
+
+
