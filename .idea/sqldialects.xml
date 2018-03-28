@@ -6,6 +6,7 @@
     <file url="file://$PROJECT_DIR$/src/Kursovoy/DrTable.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/src/Kursovoy/FillTables.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/src/Kursovoy/Grants.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/src/Kursovoy/Privileges.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/src/Kursovoy/Procedures.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/src/Kursovoy/Triggers.sql" dialect="PostgreSQL" />
     <file url="file://$PROJECT_DIR$/src/Kursovoy/mod.sql" dialect="PostgreSQL" />
